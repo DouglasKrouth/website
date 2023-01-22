@@ -9,3 +9,4 @@ def current_datetime(request):
 
 def home_page(request):
     return render(request, "index.html")
+    return HttpResponse(html)
