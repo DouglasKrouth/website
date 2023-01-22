@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template import loader
 import datetime
 
 def current_datetime(request):
@@ -11,4 +12,9 @@ def home(request):
     return render(request, "index.html")
 
 def projects(request):
-    return render(request, "projects.html")
+     template = loader.get_template('projects.html')
+     context = {}
+     return HttpResponse(template.render(context, request))
+
+# def projects(request):
+    # return render(request, "projects.html")
