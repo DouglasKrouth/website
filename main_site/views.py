@@ -7,6 +7,8 @@ def current_datetime(request):
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
-def home_page(request):
+def home(request):
     return render(request, "index.html")
-    return HttpResponse(html)
+
+def projects(request):
+    return render(request, "projects.html")

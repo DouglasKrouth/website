@@ -1,0 +1,4 @@
+01222023
+
+1. Change formatting of index.html to become base_generic/generic template format.
+1.a. This means we'll need to make a separate page for index.html's content, we want to split this up.

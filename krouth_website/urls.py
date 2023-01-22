@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from main_site.views import current_datetime, home_page
+from main_site.views import current_datetime, home, projects
 from django.conf.urls import include
 from django.urls import path, re_path
 
@@ -23,5 +23,6 @@ admin.autodiscover()
 urlpatterns = [
     path("admin/", admin.site.urls),
     # Index/homepage
-    path(r"", home_page, name='home'),
+    path(r"", home, name="home"),
+    path(r"projects", projects, name="projects")
 ]
