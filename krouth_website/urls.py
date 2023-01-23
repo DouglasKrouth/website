@@ -25,6 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # Index/homepage
     path(r"", home, name="home"),
+    path(r"index", home, name="home"),
     path(r"projects", projects, name="projects"),
 ]
 
