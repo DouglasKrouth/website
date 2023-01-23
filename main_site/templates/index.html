@@ -8,13 +8,14 @@
 	Html5up was a wonderful product to start with as it's open-source and saved me a lot of the heartache of making a site's front-page UI from scratch.
 -->
 <html>
-{% load static %}
 
 <head>
-	<title>Do Kro</title>
-	<link rel="shortcut icon" type="image/x-icon" href="{% static 'main_site/images/brunnhilde_favicon.ico' %}" />
+	{% load static %}
+	<title>D. Krouth
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="{% static 'main_site/assets/css/main.css' %}" />
+	<link rel="shortcut icon" href="{% static 'main_site/images/favicon.ico' %}" type="image/x-icon" />
 </head>
 
 <body class="homepage is-preload">
@@ -78,7 +79,8 @@
 				<div class="row">
 					<section class="col-6 col-12-narrower feature">
 						<div class="image-wrapper first">
-							<a href="#" class="image featured first"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" class="image featured first"><img src="{% static 'main_site/images/pic01.jpg' %}"
+									alt="" /></a>
 						</div>
 						<header>
 							<h2>Semper magna neque vel<br />
@@ -93,7 +95,7 @@
 					</section>
 					<section class="col-6 col-12-narrower feature">
 						<div class="image-wrapper">
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="{% static 'main_site/images/pic02.jpg' %}" alt="" /></a>
 						</div>
 						<header>
 							<h2>Amet lorem ipsum dolor<br />
@@ -128,21 +130,21 @@
 				<div class="row features">
 					<section class="col-4 col-12-narrower feature">
 						<div class="image-wrapper first">
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="{% static 'main_site/images/pic03.jpg' %}" alt="" /></a>
 						</div>
 						<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
 							vel sem sit dolor neque semper magna lorem ipsum.</p>
 					</section>
 					<section class="col-4 col-12-narrower feature">
 						<div class="image-wrapper">
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="{% static 'main_site/images/pic04.jpg' %}" alt="" /></a>
 						</div>
 						<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
 							vel sem sit dolor neque semper magna lorem ipsum.</p>
 					</section>
 					<section class="col-4 col-12-narrower feature">
 						<div class="image-wrapper">
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="{% static 'main_site/images/pic05.jpg' %}" alt="" /></a>
 						</div>
 						<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
 							vel sem sit dolor neque semper magna lorem ipsum.</p>
@@ -213,12 +215,12 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="{% static 'main_site/assets/js/jquery.min.js' %}"></script>
+	<script src="{% static 'main_site/assets/js/jquery.dropotron.min.js' %}"></script>
+	<script src="{% static 'main_site/assets/js/browser.min.js' %}"></script>
+	<script src="{% static 'main_site/assets/js/breakpoints.min.js' %}"></script>
+	<script src="{% static 'main_site/assets/js/util.js' %}"></script>
+	<script src="{% static 'main_site/assets/js/main.js' %}"></script>
 
 </body>
 
