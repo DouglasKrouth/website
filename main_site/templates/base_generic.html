@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <!-- django load static -->
+    {% load static %}
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'main_site/assets/styles.css' %}">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'main_site/images/favicon.ico' %}">
+
+    <title>{% block title %}Douglas Krouth{% endblock %}</title>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="navbar">
+            <ul class="navigation">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="content-wrap">
+        <!-- all page content -->
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer id="footer">
+            <p>Author: Douglas S. Krouth</p>
+            <p><a href="mailto:douglaskrouth@gmail.com">douglaskrouth@gmail.com</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

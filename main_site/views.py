@@ -9,12 +9,24 @@ def current_datetime(request):
     return HttpResponse(html)
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "base_generic.html")
 
 def projects(request):
      template = loader.get_template('projects.html')
      context = {}
      return HttpResponse(template.render(context, request))
 
-# def projects(request):
-    # return render(request, "projects.html")
+def about_page(request):
+    template = loader.get_template('about.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def projects_page(request):
+    template = loader.get_template('projects.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def contact_page(request):
+    template = loader.get_template('contact.html')
+    context = {}
+    return HttpResponse(template.render(context, request))

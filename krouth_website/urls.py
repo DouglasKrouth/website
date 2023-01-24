@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from main_site.views import current_datetime, home, projects
+from main_site.views import home, projects, about_page, contact_page
 from django.conf.urls import include
 from django.urls import path, re_path
 
@@ -27,6 +27,8 @@ urlpatterns = [
     path(r"", home, name="home"),
     path(r"index", home, name="home"),
     path(r"projects", projects, name="projects"),
+    path(r"about", about_page, name="about"),
+    path(r"contact", contact_page, name="contact")
 ]
 
 # Add static urls to site pattern
